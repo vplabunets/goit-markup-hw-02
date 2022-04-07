@@ -1,24 +1,27 @@
 /* main text color #757575  */
 /* secondary text color #212121 */
-/* white color #FFFFFF */
+/* main white color #FFFFFF */
 /* secondary white color: rgba(255, 255, 255, 0.6) */
 /* accent color #2196F3 */
 /* logo color #000000 */
-/* hero background color #2F303A */
+/* background color #2F303A */
 /* #F5F4FA */
 
 :root {
   --main-text-color: #757575;
   --secondary-text-color: #212121;
+  --main-white-color: #ffffff;
+  --secondary-white-color: rgba(255, 255, 255, 0.6);
   --accent-color: #2196f3;
+  --secondary-background-color: #2f303a;
 }
 body {
   font-family: 'Roboto', sans-serif;
   /* font-family: 'Raleway', sans-serif; */
+  color: var(--main-text-color);
 }
 
 .page {
-  color: var(--main-text-color);
 }
 
 .list {
@@ -28,7 +31,14 @@ body {
 .link {
   text-decoration: none;
 }
-
+.logo {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
 .header-item {
   font-weight: 500;
   font-size: 14px;
@@ -56,16 +66,10 @@ body {
   overflow: hidden;
 }
 /*---------------------Header section--------------------- */
-.logo {
-  font-family: 'Raleway';
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+.header-logo {
   color: #000000;
-  cursor: pointer;
 }
-.logo-span-web {
+.header-logo-span-web {
   color: var(--accent-color);
 }
 .nav-list-item {
@@ -84,7 +88,7 @@ body {
 }
 /*---------------------Hero section--------------------- */
 .hero {
-  background-color: #2f303a;
+  background-color: var(--secondary-background-color);
 }
 .hero-title {
   font-weight: 900;
@@ -93,7 +97,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--main-white-color);
 }
 
 .hero-btn {
@@ -104,8 +108,9 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--main-white-color);
   background-color: var(--accent-color);
+  cursor: pointer;
 }
 
 /*---------------------Advantages section--------------------- */
@@ -153,8 +158,17 @@ body {
 }
 /*---------------------Footer section--------------------- */
 .footer {
-  background-color: #2f303a;
+  background-color: var(--secondary-background-color);
 }
+
+.footer-logo {
+  color: var(--main-white-color);
+}
+
+.footer-logo-span-web {
+  color: var(--accent-color);
+}
+
 address {
   font-style: normal;
 }
@@ -162,8 +176,42 @@ address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--secondary-white-color);
 }
 .footer-contacts .street {
-  color: #ffffff;
+  color: var(--main-white-color);
+}
+
+/*---------------------Portfolio section--------------------- */
+.porfolio-filter {
+}
+.portfolio-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  background-color: #f5f4fa;
+  color: #212121;
+  cursor: pointer;
+}
+
+.portfolio-btn:hover,
+.portfolio-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--main-white-color);
+}
+.portfolio-item-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--secondary-text-color);
+}
+
+.portfolio-item-type {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
 }
